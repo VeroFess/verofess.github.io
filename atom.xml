@@ -5,9 +5,9 @@
   <subtitle>Talk is cheap!Just show code!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.binklac.com/"/>
+  <link href="blog.binklac.com/"/>
   <updated>2018-06-21T10:18:22.343Z</updated>
-  <id>http://blog.binklac.com/</id>
+  <id>blog.binklac.com/</id>
   
   <author>
     <name>VeroFess</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>SCTF 2018 WTFGame出题思路及解析</title>
-    <link href="http://blog.binklac.com/2018/06/21/SCTF-2018-WTFGame%E5%87%BA%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E8%A7%A3%E6%9E%90/"/>
-    <id>http://blog.binklac.com/2018/06/21/SCTF-2018-WTFGame出题思路及解析/</id>
+    <link href="blog.binklac.com/2018/06/21/SCTF-2018-WTFGame%E5%87%BA%E9%A2%98%E6%80%9D%E8%B7%AF%E5%8F%8A%E8%A7%A3%E6%9E%90/"/>
+    <id>blog.binklac.com/2018/06/21/SCTF-2018-WTFGame出题思路及解析/</id>
     <published>2018-06-21T08:57:19.000Z</published>
     <updated>2018-06-21T10:18:22.343Z</updated>
     
@@ -35,14 +35,14 @@
     
     </summary>
     
-      <category term="CTF记录" scheme="http://blog.binklac.com/categories/CTF%E8%AE%B0%E5%BD%95/"/>
+      <category term="CTF记录" scheme="blog.binklac.com/categories/CTF%E8%AE%B0%E5%BD%95/"/>
     
     
-      <category term="CTF" scheme="http://blog.binklac.com/tags/CTF/"/>
+      <category term="CTF" scheme="blog.binklac.com/tags/CTF/"/>
     
-      <category term="SCTF" scheme="http://blog.binklac.com/tags/SCTF/"/>
+      <category term="SCTF" scheme="blog.binklac.com/tags/SCTF/"/>
     
-      <category term="PWN" scheme="http://blog.binklac.com/tags/PWN/"/>
+      <category term="PWN" scheme="blog.binklac.com/tags/PWN/"/>
     
   </entry>
   
