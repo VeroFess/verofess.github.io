@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="blog.binklac.com/"/>
-  <updated>2018-06-21T10:18:22.343Z</updated>
+  <updated>2018-06-21T12:37:05.155Z</updated>
   <id>blog.binklac.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSharp中实现一个可继承的Singleton基类</title>
+    <link href="blog.binklac.com/2018/06/21/CSharp%E4%B8%AD%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%AF%E7%BB%A7%E6%89%BF%E7%9A%84Singleton%E5%9F%BA%E7%B1%BB/"/>
+    <id>blog.binklac.com/2018/06/21/CSharp中实现一个可继承的Singleton基类/</id>
+    <published>2018-06-21T12:27:34.000Z</published>
+    <updated>2018-06-21T12:37:05.155Z</updated>
+    
+    <content type="html"><![CDATA[<p>网上大部分的单例实现都要求在类里添加一个”GetInstance()”并且声明私有的构造函数,额外多了几行没啥用且重复的代码,一不小心还会忘记把构造函数搞成私有的,非常不爽,所以就搞了个这东西</p><p>不多说,上代码,使用的时候只需要<code>public class ClassName : Singleton&lt;ClassName&gt;</code>即可,获取实例直接<code>ClassName.Instance</code>,无需额外的更改</p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">InstanceHelper.Singleton</span> &#123;</span><br><span class="line">    public class Singleton&lt;T&gt; &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> Dictionary&lt;Type, Object&gt; TypeObjectMap = <span class="keyword">new</span> Dictionary&lt;Type, Object&gt;();</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> List&lt;Type&gt; TypeLoadList = <span class="keyword">new</span> List&lt;Type&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">static</span> <span class="keyword">public</span> T Instance &#123; <span class="keyword">get</span> =&gt; GetInstance(<span class="keyword">typeof</span>(T)); &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Singleton</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">lock</span> (TypeLoadList) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!TypeLoadList.Contains(<span class="keyword">this</span>.GetType())) &#123;</span><br><span class="line">                    <span class="keyword">throw</span> <span class="keyword">new</span> NewSingletonClassException(String.Format(<span class="string">"Class &#123;0&#125; is Singleton, Use \"&#123;1&#125;.Instance;\" but \"new &#123;1&#125;();\""</span>, <span class="keyword">this</span>.GetType().FullName, <span class="keyword">this</span>.GetType().Name));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">LockUnregisterTypeLoadStatus</span>(<span class="params">Type _Type</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">lock</span> (TypeLoadList) &#123;</span><br><span class="line">                <span class="keyword">if</span> (TypeLoadList.Contains(_Type)) &#123;</span><br><span class="line">                    TypeLoadList.Remove(_Type);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">LockRegisterTypeLoadStatus</span>(<span class="params">Type _Type</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">lock</span> (TypeLoadList) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!TypeLoadList.Contains(_Type)) &#123;</span><br><span class="line">                    TypeLoadList.Add(_Type);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">static</span> T <span class="title">GetInstance</span>(<span class="params">Type _Type</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!TypeObjectMap.ContainsKey(_Type)) &#123;</span><br><span class="line">                <span class="keyword">lock</span> (TypeObjectMap) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (!TypeObjectMap.ContainsKey(_Type)) &#123;</span><br><span class="line">                        LockRegisterTypeLoadStatus(_Type);</span><br><span class="line">                        <span class="keyword">var</span> Instance = Activator.CreateInstance(_Type);</span><br><span class="line">                        LockUnregisterTypeLoadStatus(_Type);</span><br><span class="line">                        TypeObjectMap.Add(_Type, Instance);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> (T)TypeObjectMap[_Type];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;网上大部分的单例实现都要求在类里添加一个”GetInstance()”并且声明私有的构造函数,额外多了几行没啥用且重复的代码,一不小心还会忘记把构造函数搞成私有的,非常不爽,所以就搞了个这东西&lt;/p&gt;
+&lt;p&gt;不多说,上代码,使用的时候只需要&lt;code&gt;public clas
+      
+    
+    </summary>
+    
+      <category term="开发笔记" scheme="blog.binklac.com/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="C#" scheme="blog.binklac.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>SCTF 2018 WTFGame出题思路及解析</title>
