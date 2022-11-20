@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>威尔的代码站</title>
+  <title>0xBACB</title>
   <icon>https://blog.binklac.com/image/common/apple-touch-icon.png</icon>
-  <subtitle>一些关于灵感的记录</subtitle>
+  <subtitle>难将由我，我不为难，谁敢兴之</subtitle>
   <link href="https://blog.binklac.com/atom.xml" rel="self"/>
   
   <link href="https://blog.binklac.com/"/>
-  <updated>2022-04-29T03:22:28.046Z</updated>
+  <updated>2022-04-29T03:11:01.243Z</updated>
   <id>https://blog.binklac.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSharp中实现一个可继承的Singleton基类</title>
+    <link href="https://blog.binklac.com/f72f727a78aa/"/>
+    <id>https://blog.binklac.com/f72f727a78aa/</id>
+    <published>2022-06-09T12:41:48.078Z</published>
+    <updated>2022-04-29T03:11:01.243Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;网上大部分的单例实现都要求在类里添加一个”GetInstance()”并且声明私有的构造函数,额外多了几行没啥用且重复的代码,一不小心还会忘记把构造函数搞成私有的,非常不爽,所以就搞了个这东西&lt;/p&gt;
+&lt;p&gt;不多说,上代码,使用的时候只需要&lt;code&gt;public</summary>
+        
+      
+    
+    
+    
+    <category term="开发笔记" scheme="https://blog.binklac.com/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="CSharp" scheme="https://blog.binklac.com/tags/CSharp/"/>
+    
+  </entry>
   
   <entry>
     <title>一份面向Linux下高版本Java的Minecraft参数优化教程</title>
@@ -36,32 +62,6 @@
     
     
     <category term="Minecraft" scheme="https://blog.binklac.com/tags/Minecraft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSharp中实现一个可继承的Singleton基类</title>
-    <link href="https://blog.binklac.com/8049404ed5c7/"/>
-    <id>https://blog.binklac.com/8049404ed5c7/</id>
-    <published>2022-04-29T03:11:01.243Z</published>
-    <updated>2022-04-29T03:11:01.243Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;网上大部分的单例实现都要求在类里添加一个”GetInstance()”并且声明私有的构造函数,额外多了几行没啥用且重复的代码,一不小心还会忘记把构造函数搞成私有的,非常不爽,所以就搞了个这东西&lt;/p&gt;
-&lt;p&gt;不多说,上代码,使用的时候只需要&lt;code&gt;public</summary>
-        
-      
-    
-    
-    
-    <category term="开发笔记" scheme="https://blog.binklac.com/categories/%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="CSharp" scheme="https://blog.binklac.com/tags/CSharp/"/>
     
   </entry>
   
