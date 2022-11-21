@@ -6,7 +6,7 @@
   <link href="https://blog.binklac.com/atom.xml" rel="self"/>
   
   <link href="https://blog.binklac.com/"/>
-  <updated>2022-04-29T03:11:01.243Z</updated>
+  <updated>2022-11-21T04:40:23.589Z</updated>
   <id>https://blog.binklac.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些网络安全方面的基础科普 - P1 识别恶意软件[尚未完成]</title>
+    <link href="https://blog.binklac.com/d4ad30414b22/"/>
+    <id>https://blog.binklac.com/d4ad30414b22/</id>
+    <published>2022-11-20T21:38:10.000Z</published>
+    <updated>2022-11-21T04:40:23.589Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这几天看到了一些比较肆虐而且比较常见的互联网病毒传播，所以专门写篇文章聊一聊这个问题&lt;/p&gt;
+&lt;p&gt;特别一提，由于本文的性质，本文章为公共领域文章，即在世界范围内放弃本文的所有权利，故任何人都可以以任何方式转载或重新发布&lt;/p&gt;
+&lt;p&gt;当然，如果你可以保留指向本文章的链接那</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>CSharp中实现一个可继承的Singleton基类</title>
