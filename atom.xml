@@ -6,7 +6,7 @@
   <link href="https://blog.binklac.com/atom.xml" rel="self"/>
   
   <link href="https://blog.binklac.com/"/>
-  <updated>2022-11-22T07:54:46.768Z</updated>
+  <updated>2022-11-22T08:16:25.623Z</updated>
   <id>https://blog.binklac.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一些网络安全方面的基础科普 - P2 操作系统安全从入门到放弃</title>
+    <link href="https://blog.binklac.com/27113fa2a38a/"/>
+    <id>https://blog.binklac.com/27113fa2a38a/</id>
+    <published>2022-11-22T08:10:10.000Z</published>
+    <updated>2022-11-22T08:16:25.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;这是一些我很久之前写的课件，当时还年轻，写的肯定有诸多不好的地方，还请见谅&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这篇文章主要是介绍了基础概念，详细的分析请关注后续&lt;/strong&gt;&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term="信息安全" scheme="https://blog.binklac.com/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="科普" scheme="https://blog.binklac.com/tags/%E7%A7%91%E6%99%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>强制让小米AOD只能亮五分钟的机型保持AOD常亮</title>
@@ -46,7 +73,7 @@
     <link href="https://blog.binklac.com/d4ad30414b22/"/>
     <id>https://blog.binklac.com/d4ad30414b22/</id>
     <published>2022-11-20T21:38:10.000Z</published>
-    <updated>2022-11-21T11:15:36.377Z</updated>
+    <updated>2022-11-22T08:15:23.568Z</updated>
     
     
       
@@ -61,6 +88,10 @@
     
     
     
+    
+    <category term="信息安全" scheme="https://blog.binklac.com/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
+    
+    <category term="科普" scheme="https://blog.binklac.com/tags/%E7%A7%91%E6%99%AE/"/>
     
   </entry>
   
