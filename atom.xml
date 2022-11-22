@@ -6,7 +6,7 @@
   <link href="https://blog.binklac.com/atom.xml" rel="self"/>
   
   <link href="https://blog.binklac.com/"/>
-  <updated>2022-11-21T11:15:36.377Z</updated>
+  <updated>2022-11-22T07:54:46.768Z</updated>
   <id>https://blog.binklac.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>强制让小米AOD只能亮五分钟的机型保持AOD常亮</title>
+    <link href="https://blog.binklac.com/2f586df9bdee/"/>
+    <id>https://blog.binklac.com/2f586df9bdee/</id>
+    <published>2022-11-22T07:49:02.000Z</published>
+    <updated>2022-11-22T07:54:46.768Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;为了轻薄买了个小米的Civi，然后发现AOD五分钟就灭了，你这ADO了个寄吧.jpg&lt;/p&gt;
+&lt;p&gt;解决方式也很简单，&lt;code&gt;adb shell&lt;/code&gt; 进去, 执行&lt;/p&gt;
+&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;hljs</summary>
+        
+      
+    
+    
+    
+    
+    <category term="安卓" scheme="https://blog.binklac.com/tags/%E5%AE%89%E5%8D%93/"/>
+    
+  </entry>
   
   <entry>
     <title>一些网络安全方面的基础科普 - P1 识别恶意软件</title>
